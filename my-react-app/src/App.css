@@ -1,42 +1,74 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Full-page background */
+body {
+  background-color: red;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App container: center everything inside */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The black box containing the grid */
+.pokemon-grid-container {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* The grid inside the black box */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+/* Each individual Pokémon name box */
+.pokemon-box {
+  background-color: #333;
+  color: white;
   text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Hover effect */
+.pokemon-box:hover {
+  background-color: #555;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Highlight clicked box */
+.pokemon-box.selected {
+  background-color: yellow;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Buttons container */
+.button-container {
+  margin: 20px;
 }
 
-.card {
-  padding: 2em;
+/* Buttons side by side */
+.button-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
-.read-the-docs {
-  color: #888;
+/* Pokémon detail box */
+.pokemon-detail {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
