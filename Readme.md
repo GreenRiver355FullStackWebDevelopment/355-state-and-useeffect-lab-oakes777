@@ -1,3 +1,7 @@
+sdev355 React wk5 LAB state&useEffect
+coder: Jonathan Sule
+date: May 1, 2025
+
 # useEffect Lab
 
 ## Learning Goals
