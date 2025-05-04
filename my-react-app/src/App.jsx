@@ -13,7 +13,9 @@ function App() {
   }, [offset]);
 
   const fetchPokemonList = async () => {
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`);
+    const res = await fetch(
+      `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`
+    );
     const data = await res.json();
     setPokemonList(data.results);
   };
@@ -24,12 +26,18 @@ function App() {
     setSelectedPokemon(data);
   };
 
-  const handleNext = () => setOffset(prev => prev + 20);
-  const handleBack = () => setOffset(prev => Math.max(prev - 20, 0));
+  const handleNext = () => setOffset((prev) => prev + 20);
+  const handleBack = () => setOffset((prev) => Math.max(prev - 20, 0));
 
   return (
     <Box sx={{ bgcolor: "red", minHeight: "100vh", width: "auto", py: 4 }}>
-      <Typography variant="h3" align="center" color="white" fontWeight="bold" mb={3}>
+      <Typography
+        variant="h3"
+        align="center"
+        color="white"
+        fontWeight="bold"
+        mb={3}
+      >
         Pokémon List
       </Typography>
 

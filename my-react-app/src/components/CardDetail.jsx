@@ -32,15 +32,13 @@ const CardDetail = ({ pokemon }) => {
         <Typography>Base Experience: {pokemon.base_experience}</Typography>
 
         <Typography>
-  Abilities: {pokemon.abilities.map(a => a.ability.name).join(", ")}
-</Typography>
-{pokemon.stats.map(stat => (
-  <Typography key={stat.stat.name}>
-    {stat.stat.name}: {stat.base_stat}
-  </Typography>
-))}
-
-
+          Abilities: {pokemon.abilities.map((a) => a.ability.name).join(", ")}
+        </Typography>
+        {pokemon.stats.map((stat) => (
+          <Typography key={stat.stat.name}>
+            {stat.stat.name}: {stat.base_stat}
+          </Typography>
+        ))}
       </CardContent>
     </Card>
   );

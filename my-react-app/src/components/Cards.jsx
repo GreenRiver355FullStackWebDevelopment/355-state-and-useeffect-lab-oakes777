@@ -11,8 +11,8 @@ const Cards = ({ pokemonList, onPokemonClick }) => {
         width: "100%",
         maxWidth: 800,
         display: "grid",
-        gridTemplateColumns: "repeat(4, minmax(40px, 1fr))", 
-        gridTemplateRows: "repeat(5, 50px)",  
+        gridTemplateColumns: "repeat(4, minmax(40px, 1fr))",
+        gridTemplateRows: "repeat(5, 50px)",
         gap: 1,
       }}
     >
